@@ -1,0 +1,56 @@
+/* Base styles and custom components */
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #f7f9fb;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* ATM Screen Styling */
+.atm-screen {
+    background-color: #0d1e38; /* Dark Blue Screen */
+    color: #1aff00; /* Green Text */
+    padding: 1.5rem;
+    min-height: 250px;
+    border-radius: 0.5rem;
+    box-shadow: inset 0 0 10px #00ff00; /* Neon internal shadow */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ATM Card Container Styling */
+.atm-card {
+    max-width: 420px;
+    width: 95vw;
+    background: linear-gradient(135deg, #ffffff 0%, #f0f4f7 100%);
+    border-radius: 1.5rem;
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    padding: 2.5rem 1.5rem;
+}
+
+/* Button Hover Effect */
+.action-button {
+    transition: all 0.1s ease-in-out;
+}
+.action-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+/* Neon Text Effect for screen */
+.text-neon {
+    text-shadow: 0 0 5px #1aff00, 0 0 10px #1aff00;
+}
+
+/* Hide spin buttons on number inputs for clean UI */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}

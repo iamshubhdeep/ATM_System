@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATM System Simulator</title>
+    <!-- Link to external Tailwind CSS (used for utility classes) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link to local custom CSS -->
+    <link rel="stylesheet" href="/style.css">
+    <!-- Link to Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div id="atm-app" class="atm-card">
+    <h1 class="text-3xl font-bold text-center text-gray-800 mb-6">ATM Simulator</h1>
+
+    <!-- ATM Screen Display -->
+    <div class="atm-screen mb-6">
+        <p id="screen-message" class="text-lg text-neon">Welcome! Please insert your card (Enter Account/PIN).</p>
+        <p id="balance-display" class="text-2xl font-mono text-right text-neon hidden"></p>
+    </div>
+
+    <!-- Input Area -->
+    <div id="input-area" class="space-y-4">
+        <!-- Login/Account Input -->
+        <div id="login-fields" class="space-y-4">
+            <input type="number" id="account-input" placeholder="Account Number (e.g., 123456)" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 shadow-sm" maxlength="6">
+            <input type="password" id="pin-input" placeholder="PIN (e.g., 1234)" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 shadow-sm" maxlength="4">
+            <button id="login-button" onclick="login()" class="w-full p-3 bg-blue-600 text-white font-semibold rounded-lg action-button shadow-md">Insert Card & Login</button>
+        </div>
+
+        <!-- Transaction Input (Hidden initially) -->
+        <div id="transaction-fields" class="hidden space-y-4">
+            <input type="number" id="amount-input" placeholder="Enter Amount" class="w-full p-3 border border-gray-300 rounded-lg focus:ring-green-500 focus:border-green-500 shadow-sm">
+            <div class="flex space-x-4">
+                <button onclick="performTransaction('withdraw')" class="flex-1 p-3 bg-red-600 text-white font-semibold rounded-lg action-button shadow-md">Withdraw</button>
+                <button onclick="performTransaction('deposit')" class="flex-1 p-3 bg-green-600 text-white font-semibold rounded-lg action-button shadow-md">Deposit</button>
+            </div>
+            <button onclick="checkBalance()" class="w-full p-3 bg-yellow-500 text-white font-semibold rounded-lg action-button shadow-md">Check Balance</button>
+        </div>
+    </div>
+
+    <!-- Navigation Buttons -->
+    <div id="navigation-buttons" class="hidden mt-6 space-y-4">
+        <button onclick="showTransactionMenu()" class="w-full p-3 bg-indigo-600 text-white font-semibold rounded-lg action-button shadow-md">Another Transaction</button>
+        <button onclick="logout()" class="w-full p-3 bg-gray-500 text-white font-semibold rounded-lg action-button shadow-md">Exit (Eject Card)</button>
+    </div>
+</div>
+
+<!-- Link to external JavaScript file -->
+<script src="script.js"></script>
+
+</body>
+</html>
