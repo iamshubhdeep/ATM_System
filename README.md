@@ -76,12 +76,6 @@ Just open **index.html** in any browser.
 
 ---
 
-## 🤝 Contributing
-
-Contributions are welcome!
-Feel free to fork, improve, and submit a pull request.
-
----
 
 ## 📄 License
 
