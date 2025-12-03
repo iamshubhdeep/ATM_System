@@ -77,11 +77,4 @@ Just open **index.html** in any browser.
 ---
 
 
-## 📄 License
-
-This project is intended for **learning and educational purposes**.
-You may add a proper license (MIT recommended).
-
----
-
 ### ⭐ If you like this project, consider starring the repository!
